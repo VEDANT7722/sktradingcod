@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Big Centered Quote Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* ======= CSS START ======= */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 650px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-group i {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #777;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 18px 20px 18px 65px;
+      font-size: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #fafafa;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #007BFF;
+      background: #ffffff;
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      padding: 18px;
+      font-size: 22px;
+      border: none;
+      border-radius: 10px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+    /* ======= CSS END ======= */
+  </style>
+</head>
+
+<body>
+
+<div class="form-container">
+  <h1>Request a Quote</h1>
+  <form action="#" method="post">
+
+    <div class="form-group">
+      <i class="fas fa-user"></i>
+      <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+
+    <div class="form-group">
+      <i class="fas fa-envelope"></i>
+      <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="form-group">
+      <i class="fas fa-phone"></i>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+    </div>
+
+    <div class="form-group">
+      <i class="fas fa-box"></i>
+      <input type="text" name="product" placeholder="Product Name" required>
+    </div>
+
+    <div class="form-group">
+      <i class="fas fa-map-marker-alt"></i>
+      <input type="text" name="location" placeholder="Location" required>
+    </div>
+
+    <div class="form-group">
+      <i class="fas fa-sort-numeric-up"></i>
+      <input type="number" name="quantity" placeholder="Quantity" min="1" required>
+    </div>
+
+    <div class="form-group">
+      <i class="fas fa-comment"></i>
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+
+  </form>
+</div>
+
+</body>
+</html>
