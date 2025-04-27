@@ -262,4 +262,30 @@ button {
 .quote-button:hover {
   background-color: #2c5282;
 }
+.collapsible {
+  background-color: #2b6cb0;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.active, .collapsible:hover {
+  background-color: #2c5282;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #edf2f7;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
