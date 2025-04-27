@@ -15,28 +15,28 @@ body {
 .navbar {
   background: #f8f8f8;
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 8px 0; /* reduce padding */
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
 
-}
-
 .nav-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* use space-between instead of around */
   align-items: center;
   background-color: lightblue;
-  flex-wrap: wrap;
+  padding: 0 20px; /* add side padding */
 }
 
 .logo {
   font-weight: 800;
-  font-size: 3.9rem;
+  font-size: 2.5rem; /* reduced from 3.9rem */
   color: #00008B;
   margin-right: 10px;
+}
+
 }
 
 .nav-links {
@@ -60,6 +60,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
+  margin-top: 80px; /* push hero section down */
+  padding: 20px;
+  text-align: center;
+}
+
 }
 .hero h1 {
   font-size: 1.8rem;
