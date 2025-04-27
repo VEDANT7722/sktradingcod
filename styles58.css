@@ -248,11 +248,11 @@ button {
   .nav-container {
     flex-direction: row;
   }
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
   }
 
   .logo {
