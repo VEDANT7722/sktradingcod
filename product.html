@@ -28,15 +28,47 @@
       </nav>
     </div>
   </header>
-<main>
+ <main>
     <section class="products-grid">
-      
+
+      <!-- Cement Category -->
       <div class="product-card">
         <h2>Cement</h2>
-        <p>Premium quality cement for strong and durable construction projects.</p>
+
+        <div class="brand-section">
+          <button class="collapsible">ACC</button>
+          <div class="content">
+            <ul>
+              <li>ACC Suraksha</li>
+              <li>ACC Gold</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="brand-section">
+          <button class="collapsible">Ultratech</button>
+          <div class="content">
+            <ul>
+              <li>Ultratech OPC 53</li>
+              <li>Ultratech PPC</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="brand-section">
+          <button class="collapsible">Ambuja</button>
+          <div class="content">
+            <ul>
+              <li>Ambuja Plus</li>
+              <li>Ambuja Powercem</li>
+            </ul>
+          </div>
+        </div>
+
         <a href="contact.html" class="quote-button">Get Quote</a>
       </div>
 
+      <!-- Other Main Products -->
       <div class="product-card">
         <h2>Wall Putty</h2>
         <p>High-performance wall putty for a smooth, crack-free wall finish.</p>
@@ -67,6 +99,22 @@
   <footer>
     <p>© 2025 SK Trading Co. All rights reserved.</p>
   </footer>
+
+  <script>
+    // JavaScript for collapsibles
+    const coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
