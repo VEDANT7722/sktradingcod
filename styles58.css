@@ -246,7 +246,7 @@ button {
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .nav-links {
