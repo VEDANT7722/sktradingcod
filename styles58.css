@@ -218,6 +218,35 @@ iframe {
 .whatsapp-button button:hover {
   background-color: #1ebe5d;
 }
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  width: 90%;
+  max-width: 300px;
+}
 
 
 
