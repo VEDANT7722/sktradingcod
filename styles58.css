@@ -245,9 +245,6 @@ button {
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
-  .nav-container {
-    flex-direction: row;
-  }
 .nav-links {
     display: flex;
     justify-content: center;
