@@ -248,4 +248,18 @@ button {
   width: 90%;
   max-width: 300px;
 }
+.quote-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2b6cb0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.quote-button:hover {
+  background-color: #2c5282;
+}
 
