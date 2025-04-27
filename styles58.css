@@ -204,7 +204,7 @@ iframe {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
-.whatsapp-button {
+.whatsapp-button button {
   background-color: #25D366;
   color: white;
   border: none;
@@ -215,7 +215,7 @@ iframe {
   transition: background-color 0.3s;
 }
 
-.whatsapp-button:hover {
+.whatsapp-button button:hover {
   background-color: #1ebe5d;
 }
 
