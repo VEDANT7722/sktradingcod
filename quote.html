@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Big Centered Quote Form</title>
+  <title>Request a Quote</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     /* ======= CSS START ======= */
@@ -16,6 +16,7 @@
       min-height: 100vh;
       margin: 0;
       padding: 20px;
+      overflow-x: hidden;
     }
 
     .form-container {
@@ -26,6 +27,16 @@
       width: 100%;
       max-width: 650px;
       text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeSlideUp 1s forwards;
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
@@ -114,6 +125,7 @@
         padding: 15px;
       }
     }
+
     /* ======= CSS END ======= */
   </style>
 </head>
@@ -163,7 +175,7 @@
   </form>
 </div>
 
-<!-- Redirect Script -->
+<!-- JavaScript for AJAX Form Submission -->
 <script>
   const form = document.getElementById('quoteForm');
 
@@ -174,7 +186,7 @@
     const formAction = form.action;
 
     try {
-      await fetch(formAction, {
+      const response = await fetch(formAction, {
         method: 'POST',
         body: formData,
         headers: {
@@ -182,11 +194,16 @@
         }
       });
 
-      // After successful submission, redirect to homepage
-      window.location.href = "index.html"; // <<< change link here if needed
-
+      if (response.ok) {
+        // Show Thank You popup
+        alert('Thank you! Your request has been submitted.');
+        // Redirect to homepage after user clicks OK
+        window.location.href = "index.html"; // <<< change if your homepage name is different
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
     } catch (error) {
-      alert('There was an error. Please try again.');
+      alert('Network error. Please check your connection and try again.');
     }
   });
 </script>
