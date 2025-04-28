@@ -269,7 +269,7 @@ button {
   padding: 2rem;
 }
 
-.quote-btn {
+.quote-button {
   display: block;
   margin: 30px auto; /* Center it */
   padding: 20px 40px; /* Make it bigger */
@@ -282,7 +282,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-.quote-btn:hover {
+.quote-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
