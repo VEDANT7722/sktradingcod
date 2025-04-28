@@ -98,9 +98,13 @@ body {
 
 .card {
   background: #EEE8AA;
-  padding: 30px;
-  border-radius: 20px;
-  font-weight: 800;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 800;
+    min-width: 100px;
+    max-width: 150px;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .brand-logos {
