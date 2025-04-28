@@ -269,20 +269,23 @@ button {
   padding: 2rem;
 }
 
-.quote-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #2b6cb0;
+.quote-btn {
+  display: block;
+  margin: 30px auto; /* Center it */
+  padding: 20px 40px; /* Make it bigger */
+  font-size: 24px; /* Make text bigger */
+  background-color: #007bff; /* Or your color */
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.quote-button:hover {
-  background-color: #2c5282;
+.quote-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
+
 
 /* Collapsible buttons (for brands) */
 .collapsible {
