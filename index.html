@@ -5,41 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>S.K Trading Co.</title>
   <link rel="stylesheet" href="styles58.css" />
-  </head>
+</head>
+
 <body>
+
   <!-- Navbar -->
   <header class="navbar">
     <div class="container nav-container">
- <img id=io height=100px width=120px src="IMG-20240115-WA0013-removebg-preview.png" alt="S.K Trading Company Logo">
-      <div class="logo">S.K Trading Co. </div>
 
+      <img id="io" height="100px" width="120px" src="IMG-20240115-WA0013-removebg-preview.png" alt="S.K Trading Company Logo">
+
+      <div class="logo">S.K Trading Co.</div>
+
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
-         <li><a href="brand.html">Brands</a></li>
+          <li><a href="brand.html">Brands</a></li>
           <li><a href="product.html">Products</a></li>
-          
           <li><a href="about.html">About Us</a></li>
-          
-        
           <li><a href="#">Contact Us</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-<img height=500px width=1390px
-src="Image-with-new-bag-designsPro.jpg" />
-
+      <img height="500px" width="1390px" src="Image-with-new-bag-designsPro.jpg" />
       <h1>Premium Quality Cements</h1>
-    
     </div>
   </section>
-<hr>
+
+  <hr>
 
   <!-- Products -->
   <section class="section" id="products">
@@ -54,7 +55,9 @@ src="Image-with-new-bag-designsPro.jpg" />
       </div>
     </div>
   </section>
-<section class="section" id="Building">
+
+  <!-- Building Materials -->
+  <section class="section" id="Building">
     <div class="container">
       <h2>Building Material</h2>
       <div class="card-grid">
@@ -73,23 +76,29 @@ src="Image-with-new-bag-designsPro.jpg" />
       <h2>Gallery</h2>
       <div class="card-grid">
         <div class="image-box">
-<img height=120px width=290px
-src="C:\Users\91772\Downloads\Phone Link\IMG-20240115-WA0013.jpg" />
-</div>
+          <img height="120px" width="290px" src="C:\Users\91772\Downloads\Phone Link\IMG-20240115-WA0013.jpg" />
+        </div>
         <div class="image-box">📸</div>
         <div class="image-box">📸</div>
       </div>
     </div>
   </section>
 
- 
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 1995 - 2025 S.K Trading Co. <br>
- All Rights Reserved.</p>
+      <p>&copy; 1995 - 2025 S.K Trading Co. <br> All Rights Reserved.</p>
     </div>
   </footer>
+
+  <!-- JavaScript for hamburger -->
+  <script>
+    function toggleMenu() {
+      var navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show-menu");
+    }
+  </script>
+
 </body>
 </html>
+
