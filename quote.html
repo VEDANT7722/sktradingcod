@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Big Centered Quote Form</title>
+  <title>Request a Quote</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     /* ======= CSS START ======= */
@@ -26,6 +26,12 @@
       width: 100%;
       max-width: 650px;
       text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     h1 {
@@ -42,6 +48,16 @@
 
     .form-group {
       position: relative;
+      animation: slideUp 1s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-group:nth-child(n) {
+      animation-delay: calc(0.1s * var(--i));
     }
 
     .form-group i {
@@ -82,11 +98,76 @@
       color: white;
       cursor: pointer;
       transition: all 0.3s ease;
+      animation: fadeIn 1s ease forwards;
     }
 
     button:hover {
       background-color: #0056b3;
       transform: translateY(-2px);
+    }
+
+    /* Popup Styling */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #4BB543;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      animation: popUp 0.5s ease forwards;
+      z-index: 1000;
+      font-size: 18px;
+    }
+
+    @keyframes popUp {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .form-container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      input, textarea {
+        padding: 16px 18px 16px 55px;
+        font-size: 18px;
+      }
+
+      .form-group i {
+        font-size: 20px;
+        left: 15px;
+      }
+
+      button {
+        padding: 16px;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      input, textarea {
+        padding: 14px 15px 14px 50px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 14px;
+        font-size: 18px;
+      }
     }
     /* ======= CSS END ======= */
   </style>
@@ -96,40 +177,38 @@
 
 <div class="form-container">
   <h1>Request a Quote</h1>
-<form action="https://formsubmit.co/vedantagrawal981@gmail.com" method="post">
-
-
-    <div class="form-group">
+  <form id="quoteForm" action="https://formsubmit.co/ajax/vedantagrawal981@gmail.com" method="POST">
+    <div class="form-group" style="--i:1;">
       <i class="fas fa-user"></i>
       <input type="text" name="name" placeholder="Your Name" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" style="--i:2;">
       <i class="fas fa-envelope"></i>
       <input type="email" name="email" placeholder="Your Email" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" style="--i:3;">
       <i class="fas fa-phone"></i>
       <input type="tel" name="phone" placeholder="Phone Number" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" style="--i:4;">
       <i class="fas fa-box"></i>
       <input type="text" name="product" placeholder="Product Name" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" style="--i:5;">
       <i class="fas fa-map-marker-alt"></i>
       <input type="text" name="location" placeholder="Location" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" style="--i:6;">
       <i class="fas fa-sort-numeric-up"></i>
       <input type="number" name="quantity" placeholder="Quantity" min="1" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" style="--i:7;">
       <i class="fas fa-comment"></i>
       <textarea name="message" rows="5" placeholder="Your Message"></textarea>
     </div>
@@ -138,6 +217,38 @@
   </form>
 </div>
 
+<div id="popup" class="popup">Thank you! Your request has been sent.</div>
+
+<script>
+  const form = document.getElementById('quoteForm');
+  const popup = document.getElementById('popup');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const formAction = form.action;
+
+    try {
+      await fetch(formAction, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      form.reset();
+      popup.style.display = 'block';
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 3000);
+
+    } catch (error) {
+      alert('There was an error. Please try again.');
+    }
+  });
+</script>
 
 </body>
 </html>
