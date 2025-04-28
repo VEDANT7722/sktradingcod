@@ -269,7 +269,7 @@ button {
   padding: 2rem;
 }
 
-.quote-button {
+.quote-button{
   display: block;
   margin: 30px auto; /* Center it */
   padding: 20px 40px; /* Make it bigger */
