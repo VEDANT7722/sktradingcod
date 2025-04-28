@@ -17,6 +17,12 @@
       margin: 0;
       padding: 20px;
       overflow-x: hidden;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .form-container {
@@ -27,16 +33,6 @@
       width: 100%;
       max-width: 650px;
       text-align: center;
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeSlideUp 1s forwards;
-    }
-
-    @keyframes fadeSlideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     h1 {
@@ -100,32 +96,43 @@
       transform: translateY(-2px);
     }
 
-    /* ======= Mobile Responsive ======= */
+    /* Thank you message */
+    .thank-you {
+      display: none;
+      font-size: 24px;
+      color: green;
+      margin-top: 20px;
+      animation: fadeSlideUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     @media (max-width: 768px) {
       .form-container {
         padding: 30px 20px;
+      }
+
+      input, textarea {
+        padding-left: 55px;
+        font-size: 18px;
+      }
+
+      .form-group i {
+        font-size: 20px;
+        left: 15px;
       }
 
       h1 {
         font-size: 32px;
       }
 
-      input, textarea {
-        padding: 15px 15px 15px 50px;
-        font-size: 18px;
-      }
-
-      .form-group i {
-        left: 15px;
-        font-size: 20px;
-      }
-
       button {
         font-size: 20px;
-        padding: 15px;
       }
     }
-
     /* ======= CSS END ======= */
   </style>
 </head>
@@ -134,8 +141,8 @@
 
 <div class="form-container">
   <h1>Request a Quote</h1>
-  <form id="quoteForm" action="https://formsubmit.co/vedantagrawal981@gmail.com" method="POST">
 
+  <form id="quoteForm">
     <div class="form-group">
       <i class="fas fa-user"></i>
       <input type="text" name="name" placeholder="Your Name" required>
@@ -173,37 +180,30 @@
 
     <button type="submit">Submit</button>
   </form>
+
+  <div class="thank-you" id="thankYouMessage">
+    Thank you! Your quote has been submitted. <br>
+    <a href="index.html" style="color: #007BFF; text-decoration: underline;">Return to Homepage</a>
+  </div>
 </div>
 
-<!-- JavaScript for AJAX Form Submission -->
 <script>
-  const form = document.getElementById('quoteForm');
+  // Handle form submission with AJAX
+  document.getElementById('quoteForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Stop normal form submit
 
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const formAction = form.action;
+    const formData = new FormData(this);
 
     try {
-      const response = await fetch(formAction, {
+      await fetch('https://formsubmit.co/ajax/vedantagrawal981@gmail.com', {
         method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
+        body: formData
       });
 
-      if (response.ok) {
-        // Show Thank You popup
-        alert('Thank you! Your request has been submitted.');
-        // Redirect to homepage after user clicks OK
-        window.location.href = "index.html"; // <<< change if your homepage name is different
-      } else {
-        alert('Oops! Something went wrong. Please try again.');
-      }
+      document.getElementById('quoteForm').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
     } catch (error) {
-      alert('Network error. Please check your connection and try again.');
+      alert('Something went wrong. Please try again.');
     }
   });
 </script>
