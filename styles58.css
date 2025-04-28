@@ -269,38 +269,43 @@ button {
   padding: 2rem;
 }
 
-.quote-button{
-  display: block;
-  margin: 30px auto; /* Center it */
-  padding: 20px 40px; /* Make it bigger */
-  font-size: 24px; /* Make text bigger */
-  background-color: #007bff; /* Or your color */
+/* Fixed Huge Centered Quote Button */
+.quote-button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.quote-button {
+  display: inline-block;
+  padding: 20px 50px;
+  font-size: 28px;
+  background-color: #007bff;
   color: white;
-  border: none;
-  border-radius: 10px; /* Rounded corners */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .quote-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
-
 
 /* Collapsible buttons (for brands) */
 .collapsible {
-    background-color: #7A73D1;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 165px;
-    text-align: center;
-    border: none;
-    outline: none;
-    font-size: 25px;
-    margin: 10px auto;
-    border-radius: 20px;
-    display: inline-block;
+  background-color: #7A73D1;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 165px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  margin: 10px auto;
+  border-radius: 20px;
+  display: inline-block;
 }
 
 .active, .collapsible:hover {
@@ -331,4 +336,3 @@ button {
   margin-bottom: 5px;
   list-style-type: disc;
 }
-
