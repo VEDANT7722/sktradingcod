@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://vedant7722.github.io/sktradingcod/sitemap.xml
