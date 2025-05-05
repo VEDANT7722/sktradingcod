@@ -1,3 +1,4 @@
+/* Core Layout */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -12,11 +13,32 @@ body {
   padding: 30px;
 }
 
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
 /* Navbar Section */
 .navbar {
   background: #f8f8f8;
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
+  transition: padding 0.3s ease;
+}
+
+.navbar.shrink {
+  padding: 5px 0;
 }
 
 .nav-container {
@@ -46,18 +68,19 @@ body {
   padding: 0;
 }
 
-.nav-links li {
-  list-style: none;
-}
-
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-/* Hamburger Menu Icon */
+.nav-links a:hover {
+  color: #00008B;
+}
+
+/* Hamburger Menu */
 .menu-icon {
   display: none;
   font-size: 2rem;
@@ -67,32 +90,36 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url('C:/Users/91772/Pictures/th_edited.jpg') no-repeat center center/cover;
-  color: #663399;
-  padding: 10px 20px;
+  position: relative;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  transition: transform 5s ease;
+}
+
+.hero:hover img {
+  transform: scale(1.05);
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 30px;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-out;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.hero button {
-  padding: 10px 20px;
-  background: orange;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-/* Section Style */
+/* Section */
 .section {
   padding: 40px 20px;
 }
@@ -117,9 +144,16 @@ body {
   border-radius: 20px;
   font-weight: 800;
   min-width: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* Brand Logos Section */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand Logos */
 .brand-logos {
   display: flex;
   justify-content: center;
@@ -143,6 +177,12 @@ body {
   justify-content: center;
   font-size: 2rem;
   border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
 }
 
 /* Video Grid */
@@ -189,6 +229,11 @@ iframe {
   font-weight: 600;
   cursor: pointer;
   border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: darkorange;
 }
 
 /* Footer */
@@ -199,6 +244,8 @@ iframe {
   padding: 20px;
   font-size: 0.9rem;
 }
+
+/* Brands Section */
 .brands-section {
   padding: 4rem 10%;
   background-color: #f2f6ff;
@@ -236,6 +283,7 @@ iframe {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
+/* WhatsApp Button */
 .whatsapp-button button {
   background-color: #25D366;
   color: white;
@@ -250,6 +298,7 @@ iframe {
 .whatsapp-button button:hover {
   background-color: #1ebe5d;
 }
+
 /* Products Page Specific */
 .products-grid {
   display: grid;
@@ -290,7 +339,7 @@ iframe {
   transform: scale(1.05);
 }
 
-/* Collapsibles (Brands and Products inside) */
+/* Collapsibles */
 .collapsible {
   background-color: #7A73D1;
   color: white;
@@ -320,7 +369,7 @@ iframe {
   margin-bottom: 10px;
 }
 
-/* Centered List inside Collapsibles */
+/* Centered List */
 .brand-section ul {
   list-style-type: none;
   padding-left: 0;
@@ -334,7 +383,7 @@ iframe {
   list-style-type: disc;
 }
 
-/* Images */
+/* General Image Styling */
 img {
   max-width: 100%;
   height: auto;
@@ -346,7 +395,7 @@ button {
   max-width: 300px;
 }
 
-/* --- Mobile Responsive Adjustments --- */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -386,4 +435,10 @@ button {
     font-size: 2rem;
     margin-bottom: 10px;
   }
+
+  .hero h1 {
+    font-size: 2rem;
+    padding: 10px 20px;
+  }
 }
+
