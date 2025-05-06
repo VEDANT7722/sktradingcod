@@ -3,8 +3,9 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  color: #222;
-  background: #fff;
+  color: #2E3A59;
+  background: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+  background-color: #f5f7fa;
 }
 
 .container {
@@ -31,7 +32,7 @@ body {
 
 /* Navbar Section */
 .navbar {
-  background: #f8f8f8;
+  background: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
   transition: padding 0.3s ease;
@@ -57,7 +58,7 @@ body {
 .logo {
   font-weight: 800;
   font-size: 2.5rem;
-  color: #00008B;
+  color: #2E3A59;
 }
 
 .nav-links {
@@ -70,14 +71,14 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #2E3A59;
   font-weight: 600;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #00008B;
+  color: #F0A500;
 }
 
 /* Hamburger Menu */
@@ -122,12 +123,14 @@ body {
 /* Section */
 .section {
   padding: 40px 20px;
+  background-color: #ffffff;
 }
 
 .section h2 {
   text-align: center;
   margin-bottom: 40px;
   font-size: 2rem;
+  color: #2E3A59;
 }
 
 /* Card Grid */
@@ -139,7 +142,7 @@ body {
 }
 
 .card {
-  background: #EEE8AA;
+  background: #fef3c7;
   padding: 20px;
   border-radius: 20px;
   font-weight: 800;
@@ -200,7 +203,7 @@ iframe {
 
 /* Testimonials */
 .testimonials {
-  background: #f9f9f9;
+  background: #f2f6ff;
   text-align: center;
 }
 
@@ -223,7 +226,7 @@ iframe {
 
 .contact-form button {
   padding: 12px;
-  background: orange;
+  background: #F0A500;
   color: #fff;
   border: none;
   font-weight: 600;
@@ -233,13 +236,13 @@ iframe {
 }
 
 .contact-form button:hover {
-  background: darkorange;
+  background: #cf8500;
 }
 
 /* Footer */
 .footer {
-  background: #111;
-  color: #aaa;
+  background: #2E3A59;
+  color: #ddd;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
@@ -255,7 +258,7 @@ iframe {
 .brands-section h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #001f8f;
+  color: #2E3A59;
 }
 
 .brand-card {
@@ -316,6 +319,10 @@ iframe {
   transition: transform 0.3s;
 }
 
+.product-card:hover {
+  transform: scale(1.03);
+}
+
 /* Quote Button */
 .quote-button-container {
   text-align: center;
@@ -326,7 +333,7 @@ iframe {
   display: inline-block;
   padding: 20px 50px;
   font-size: 28px;
-  background-color: #007bff;
+  background-color: #2E3A59;
   color: white;
   text-decoration: none;
   border-radius: 12px;
@@ -335,13 +342,13 @@ iframe {
 }
 
 .quote-button:hover {
-  background-color: #0056b3;
+  background-color: #1e293b;
   transform: scale(1.05);
 }
 
 /* Collapsibles */
 .collapsible {
-  background-color: #7A73D1;
+  background-color: #F0A500;
   color: white;
   cursor: pointer;
   padding: 10px;
@@ -356,7 +363,7 @@ iframe {
 }
 
 .active, .collapsible:hover {
-  background-color: #2c5282;
+  background-color: #cf8500;
 }
 
 .content {
@@ -405,7 +412,7 @@ button {
 
   .menu-icon {
     display: block;
-    color: #00008B;
+    color: #2E3A59;
     position: absolute;
     top: 20px;
     right: 30px;
@@ -441,4 +448,3 @@ button {
     padding: 10px 20px;
   }
 }
-
