@@ -31,7 +31,7 @@ body {
 }
 .hero h1 {
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -445,7 +445,7 @@ button {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 10px 20px;
   }
 }
