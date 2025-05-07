@@ -1,0 +1,114 @@
+Here is the **`cement.html` file with embedded CSS** (no external CSS file needed). You just need to have the relevant images in an `images/` folder.
+
+---
+
+### ✅ `cement.html` (with internal CSS)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cement Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card h2 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      color: #003366;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cement Product Details</h1>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </header>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="images/acc-gold.jpg" alt="ACC Gold Cement">
+      <h2>ACC Gold</h2>
+      <p>High strength, long-lasting cement suitable for premium construction.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/acc-suraksha.jpg" alt="ACC Suraksha Cement">
+      <h2>ACC Suraksha</h2>
+      <p>Engineered for strength and safety in home construction.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/acc-concrete.jpg" alt="ACC Concrete Cement">
+      <h2>ACC Concrete+</h2>
+      <p>Optimized for RCC structures and high-performance durability.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/mp-birla-chetak.jpg" alt="MP Birla Chetak Cement">
+      <h2>MP Birla Chetak</h2>
+      <p>Economical, general-purpose cement with consistent quality.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/mp-birla-rakshak.jpg" alt="MP Birla Rakshak Cement">
+      <h2>MP Birla Rakshak</h2>
+      <p>Corrosion-resistant cement ideal for coastal and damp areas.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/mp-birla-perfect-plus.jpg" alt="MP Birla Perfect Plus Cement">
+      <h2>MP Birla Perfect Plus</h2>
+      <p>Premium cement for perfect finishing and high durability.</p>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+---
+
+Would you like the product cards to be clickable for more details about each brand in the future?
