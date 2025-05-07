@@ -29,6 +29,19 @@ body {
 .fade-in {
   animation: fadeInUp 1s ease forwards;
 }
+.hero h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 30px;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-out;
+}
 
 /* Navbar Section */
 .navbar {
