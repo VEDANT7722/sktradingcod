@@ -445,7 +445,7 @@ button {
   }
 
   .hero h1 {
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 16PX;
+    padding: 1px 15px;
   }
 }
