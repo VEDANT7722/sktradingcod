@@ -246,6 +246,7 @@ iframe {
   color: #ddd;
   text-align: center;
   padding: 20px;
+  flex-wrap: wrap
   font-size: 0.9rem;
 }
 
