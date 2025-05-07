@@ -161,8 +161,8 @@ body {
 
 /* Image Box */
 .image-box {
-  background: #eee;
-  height: 150px;
+  background: #e2e8f0;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,8 +172,8 @@ body {
 }
 
 .image-box img {
-  width: 100%;
-  height: auto;
+  width: 380px;
+  height: 200px;
 }
 
 /* Video Grid */
